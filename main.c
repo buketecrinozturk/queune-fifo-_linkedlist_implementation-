@@ -5,7 +5,7 @@ struct node
 {
     int data;
     struct node *next;
-}*kyrk_ilk,*kyrk_son,*next_gecici,*kyrk_ilk_gecici;
+}*kyrk_ilk,*kyrk_son,*list_gecici,*kyrk_ilk_gecici;
  
 int ilkElemaniGoster();
 void elemanEkle(int data);
@@ -79,16 +79,16 @@ void elemanEkle(int data)
     }
     else
     {
-        next_gecici=(struct node *)malloc(1*sizeof(struct node));
+        list_gecici=(struct node *)malloc(1*sizeof(struct node));
         kyrk_son->next = next_gecici;
-        next_gecici->data = data;
-        next_gecici->next = NULL;
-        kyrk_son = next_gecici;
+        list_gecici->data = data;
+        list_gecici->next = NULL;
+        kyrk_son = list_gecici;
     }
-    sayac++; // eleman sayisini hesaplamak için ekleme isleminde sayaci 1 arttırıyoruz.
+    sayac++; // eleman sayisini hesaplamak iÃ§in ekleme isleminde sayaci 1 arttÄ±rÄ±yoruz.
 }
 
-/************************** Kuyruk Elemanları Sergileme Kismi ***************************///buketecrinozturk
+/************************** Kuyruk ElemanlarÄ± Sergileme Kismi ***************************///buketecrinozturk
 
 void elemanlariGoster()
 {
