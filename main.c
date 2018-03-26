@@ -80,7 +80,7 @@ void elemanEkle(int data)
     else
     {
         list_gecici=(struct node *)malloc(1*sizeof(struct node));
-        kyrk_son->next = next_gecici;
+        kyrk_son->next = list_gecici;
         list_gecici->data = data;
         list_gecici->next = NULL;
         kyrk_son = list_gecici;
